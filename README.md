@@ -10,7 +10,10 @@
 ![-----------------------------------------------------](https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/rainbow.png)
 
 <h2>How To Use</h2>
-
+<p align="center"> As you can see, before using this, you need to get your own "clientID" and "Bearer Token".
+<br>
+Don't forget to link the required libraries (Unirest etc...).
+</p>
 <p align="center">
   <img src="images/img.PNG" width="70%" height="70%">
 </p>

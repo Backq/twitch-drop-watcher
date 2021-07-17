@@ -1,7 +1,8 @@
 <h1 align="center">twitch.tv drop watcher</h1>
-![-----------------------------------------------------](https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/rainbow.png)
-# Twitch.tv auto reclaimer
 
+![-----------------------------------------------------](https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/rainbow.png)
+
+# Twitch.tv auto reclaimer
 > test readme
 
 ![-----------------------------------------------------](https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/rainbow.png)

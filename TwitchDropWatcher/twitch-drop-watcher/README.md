@@ -1,2 +1,0 @@
-# twitch-drop-watcher
- 

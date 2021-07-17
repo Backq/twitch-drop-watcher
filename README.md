@@ -17,3 +17,5 @@ Don't forget to link the required libraries (Unirest etc...).
 <p align="center">
   <img src="images/img.PNG" width="70%" height="70%">
 </p>
+
+![-----------------------------------------------------](https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/rainbow.png)

@@ -2,8 +2,8 @@
 
 ![-----------------------------------------------------](https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/rainbow.png)
 
-# Twitch.tv auto reclaimer
-> test readme
+# Twitch.tv drops auto reclaimer
+> NOTE: Before using the source, you need to get your own client id and bearer token from twitch api, using your own account.\nThere are no checks for ip so you can send request without put a proxy list.
 
 ![-----------------------------------------------------](https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/rainbow.png)
 

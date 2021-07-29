@@ -10,14 +10,26 @@
 ![-----------------------------------------------------](https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/rainbow.png)
 
 <h2>How To Use</h2>
-<p align="center"> As you can see, before using this, you need to get your own "clientID" and "Bearer Token".
+<p align="center"> Fill the txt files with your 'client_id' and 'OAuth token' as I explained below.
 <br>
-Don't forget to link the required libraries (Unirest, Selenium etc...).
+Don't forget to open 'chromedriver' before open the drop watcher.
+<br>
+!! CHROMEDRIVER MUST HAVE THE SAME VERSION AS GOOGLE CHROME !!
+</p>
+<p align="center">
+  <img src="images/img.png" width="70%" height="70%">
+</p>
+
+![-----------------------------------------------------](https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/rainbow.png)
+<h2>How to get "client_id" and "OAuth token"</h2>
+<p align="center"> [1] Visit "twitch.tv" and log into your account.
+<br>
+[2] When you are into the home page, press F12, press on "Network" and then on "Fetch/XHR".
+<br>
+[3] Press on "gql" and then into 'Request Headers' you can see your client_id and OAuth token.
 <br>
 If you need help, contact me on Telegram: @Backq or Discord: Back#0003
 </p>
 <p align="center">
-  <img src="images/img.PNG" width="70%" height="70%">
+  <img src="images/tut.png" width="70%" height="70%">
 </p>
-
-![-----------------------------------------------------](https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/rainbow.png)

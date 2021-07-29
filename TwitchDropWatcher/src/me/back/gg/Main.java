@@ -28,8 +28,7 @@ public class Main {
     public static List<String> excludingList = new ArrayList<String>();
     public static List<String> alreadyWatched = new ArrayList<String>();
     public static int currentStreamer;
-    
-	
+
      public static String username = System.getProperty("user.name");
      
      public static ChromeOptions options = new ChromeOptions();
@@ -37,6 +36,9 @@ public class Main {
      public static WebDriver driver;
      
 	public static void main(String[] args) throws Exception {
+		Wrapper.init( );
+		Wrapper.readID( );
+		Wrapper.readOAuth( );
 		System.setProperty("webdriver.chrome.silentOutput", "true");
 		java.util.logging.Logger.getLogger("org.openqa.selenium").setLevel(Level.OFF);
 		loadStreamers();
@@ -45,9 +47,11 @@ public class Main {
 			System.out.println(e + " is Online");
 		});
 		
+		
 		options.addArguments("user-data-dir=C:\\Users\\" + username + "\\AppData\\Local\\Google\\Chrome\\User Data");
 		options.addArguments("--log-level=3");
 		options.addArguments("--output=/dev/null","--disable-logging","--silent");
+		
 		
 		driver = new ChromeDriver(options);
 		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
@@ -64,11 +68,14 @@ public class Main {
 		return gson;
 	}
 	
-	public static void loadStreamers() throws Exception {
+	public static void loadStreamers() {
+		try {
 		Path currentPath = Paths.get("");
 		String currentDir = currentPath.toAbsolutePath().toString() + "\\streamers.txt";   
 		List<String> streamers = Files.readAllLines(Paths.get(currentDir));
+		System.out.println("Streamer list: " + streamers);
 		streamersList.addAll(streamers);
+		} catch (Exception aa) {}
 	}
 	
 	public static void checkStream() throws Exception {
@@ -106,6 +113,12 @@ public class Main {
 		driver.navigate().to("https://www.twitch.tv/drops/inventory");
 		Thread.sleep(5000);
 		WebElement progressBar = wait.until(ExpectedConditions.visibilityOf(driver.findElements(By.className("tw-progress-bar")).get(0)));
+		/***
+		 * You could get "Exception in thread "main" java.lang.IndexOutOfBoundsException: Index 0 out of bounds for length 0"
+		 * if the classname "tw-progress-bar" doesn't exist.
+		 * For fix this issue you need to put this function in a loop and then continue the loop if progressBar == null.
+		 */
+		
 		percentage = Integer.parseInt(progressBar.getAttribute("aria-valuenow"));
 		System.out.println("[1] Start Percentage: " + percentage);
 		
